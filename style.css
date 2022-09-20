@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #dadada;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contain {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contain .image {
+    margin: 10px 20px;
+    width: 260px;
+    height: 160px;
+    overflow: hidden;
+   
+
+}
+.image img {
+    width: 260px;
+    height: 160px;
+    object-fit: cover;
+    transition: ease 0.3s;
+}
+.image:hover img {
+    transform: scale(1.2);
+}
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: ease 0.3s;
+    transform: scale(0.8);
+    z-index: 10;
+}
+.gallery__inner img{
+    width: 1000px;
+    height: 600px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+    border-radius: 4px;
+    color: white;
+    position: absolute;
+    background-color: white;
+    z-index: 100;
+    
+}
+
+.icon.close {
+    top: 40px;
+    right: 40px;
+}
+
+.icon.prev {
+    left: 100px;
+}
+
+.icon.next {
+    right: 100px;
+}
+
+.show {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: unset;
+}
+
+.hide {
+    display: none;
+}
